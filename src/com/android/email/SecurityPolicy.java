@@ -586,6 +586,8 @@ public class SecurityPolicy {
 
     public void setAccountPolicy(long accountId, Policy policy, String securityKey) {
         Account account = Account.restoreAccountWithId(mContext, accountId);
+        // Let's not care about changes to the policy and not set any holds
+        /*
         Policy oldPolicy = null;
         if (account.mPolicyKey > 0) {
             oldPolicy = Policy.restorePolicyWithId(mContext, account.mPolicyKey);
@@ -607,8 +609,10 @@ public class SecurityPolicy {
             setAccountPolicy(mContext, account, policy, securityKey);
             policiesUpdated();
         }
-
+        */
+        setAccountPolicy(mContext, account, policy, securityKey);
         boolean setHold = false;
+        /*
         if (policy.mProtocolPoliciesUnsupported != null) {
             // We can't support this, reasons in unsupportedRemotePolicies
             LogUtils.d(Logging.LOG_TAG,
@@ -636,6 +640,7 @@ public class SecurityPolicy {
             // Put up a notification
             NotificationController.getInstance(mContext).showSecurityNeededNotification(account);
         }
+        */
         // Set/clear the account hold.
         setAccountHoldFlag(mContext, account, setHold);
     }
