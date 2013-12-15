@@ -107,13 +107,6 @@ public class AttachmentUtilities {
      * be lower case, and should not include a "."
      */
     public static final String[] UNACCEPTABLE_ATTACHMENT_EXTENSIONS = new String[] {
-        // File types that contain malware
-        "ade", "adp", "bat", "chm", "cmd", "com", "cpl", "dll", "exe",
-        "hta", "ins", "isp", "jse", "lib", "mde", "msc", "msp",
-        "mst", "pif", "scr", "sct", "shb", "sys", "vb", "vbe",
-        "vbs", "vxd", "wsc", "wsf", "wsh",
-        // File types of common compression/container formats (again, to avoid malware)
-        "zip", "gz", "z", "tar", "tgz", "bz2",
     };
     /**
      * Filename extensions of attachments that can be installed.
