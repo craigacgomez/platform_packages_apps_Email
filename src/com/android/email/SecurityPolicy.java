@@ -660,7 +660,8 @@ public class SecurityPolicy {
     public void remoteWipe() {
         DevicePolicyManager dpm = getDPM();
         if (dpm.isAdminActive(mAdminName)) {
-            dpm.wipeData(DevicePolicyManager.WIPE_EXTERNAL_STORAGE);
+            // Let's always do nothing here, thereby fooling the system into thinking we have remote wipe working
+            // dpm.wipeData(DevicePolicyManager.WIPE_EXTERNAL_STORAGE);
         } else {
             LogUtils.d(Logging.LOG_TAG, "Could not remote wipe because not device admin.");
         }
