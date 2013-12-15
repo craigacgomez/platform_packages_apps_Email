@@ -122,14 +122,14 @@ public class AttachmentUtilities {
      * so we should probably factor that in. A 5MB attachment will generally be around
      * 6.8MB downloaded but only 5MB saved.
      */
-    public static final int MAX_ATTACHMENT_DOWNLOAD_SIZE = (5 * 1024 * 1024);
+    public static final int MAX_ATTACHMENT_DOWNLOAD_SIZE = (10 * 1024 * 1024);
     /**
      * The maximum size of an attachment we're willing to upload (measured as stored on disk).
      * Attachments that are base64 encoded (most) will be about 1.375x their actual size
      * so we should probably factor that in. A 5MB attachment will generally be around
      * 6.8MB uploaded.
      */
-    public static final int MAX_ATTACHMENT_UPLOAD_SIZE = (5 * 1024 * 1024);
+    public static final int MAX_ATTACHMENT_UPLOAD_SIZE = (10 * 1024 * 1024);
 
     private static Uri sUri;
     public static Uri getAttachmentUri(long accountId, long id) {
