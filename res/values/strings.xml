@@ -826,4 +826,7 @@
     <string name="account_setup_options_mail_check_frequency_6hour">Every 6 hours</string>
     <string name="account_setup_options_mail_check_frequency_12hour">Every 12 hours</string>
     <string name="account_setup_options_mail_check_frequency_1day">Every day</string>
+
+    <!-- Notify on every message pop-up menu label -->
+    <string name="account_settings_notify_every_message_label">Notify for every message</string>
 </resources>
